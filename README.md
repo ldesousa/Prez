@@ -11,6 +11,16 @@ Prez is pretty straight-forward to install and operate and while being high-perf
 
 Prez is quite simple and expects "high quality" data to work well. By requiring that you create high quality for it, Prez ensures your value is retained in your data and not in a black box application: you remain in control!
 
+## Development Schedule
+
+The following features and other updates are planned:
+
+Feature | Timeline
+--- | ---
+Improved installation documentation | Mid/late May, 2022
+CQL filtering | Late May, 2022 
+Profile auto-creation | Late May, 2022
+
 ## Installation
 Install using Poetry (optional), which you can install [here](https://python-poetry.org/docs/#installation) (recommended), or by running:
 
