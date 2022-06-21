@@ -26,7 +26,7 @@ VOCPREZ_SPARQL_ENDPOINT = os.environ.get("VOCPREZ_SPARQL_ENDPOINT", "")
 VOCPREZ_SPARQL_USERNAME = os.environ.get("VOCPREZ_SPARQL_USERNAME", "")
 VOCPREZ_SPARQL_PASSWORD = os.environ.get("VOCPREZ_SPARQL_PASSWORD", "")
 
-SPACEPREZ_SPARQL_ENDPOINT = os.environ.get("SPACEPREZ_SPARQL_ENDPOINT", "")
+SPACEPREZ_SPARQL_ENDPOINT = os.environ.get("SPACEPREZ_SPARQL_ENDPOINT", "http://pid-lb-715299128.ap-southeast-2.elb.amazonaws.com:3030/pid-sss")
 SPACEPREZ_SPARQL_USERNAME = os.environ.get("SPACEPREZ_SPARQL_USERNAME", "")
 SPACEPREZ_SPARQL_PASSWORD = os.environ.get("SPACEPREZ_SPARQL_PASSWORD", "")
 
@@ -43,7 +43,7 @@ DEMO = os.environ.get("DEMO", True)
 ALLOW_PARTIAL_RESULTS = os.environ.get("ALLOW_PARTIAL_RESULTS", True)
 
 ENABLED_PREZS = json.loads(
-    os.environ.get("ENABLED_PREZS", '["VocPrez", "SpacePrez"]')
+    os.environ.get("ENABLED_PREZS", '["SpacePrez"]')
 )  # must use proper capitalisation
 THEME_VOLUME = os.environ.get("THEME_VOLUME", None)
 SIDENAV = os.environ.get("SIDENAV", "False") == "True"

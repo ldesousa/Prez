@@ -107,7 +107,6 @@ async def count_collections(dataset_id: Optional[str] = None):
             ?d dcterms:identifier ?d_id ;
                 a dcat:Dataset ;
                 rdfs:member ?coll .
-            FILTER ({f'STR(?d_id) = "{dataset_id}" && ' if dataset_id is not None else ""}DATATYPE(?d_id) = xsd:token)
             ?coll a geo:FeatureCollection .
         }}
     """
@@ -135,7 +134,6 @@ async def list_collections(
                 dcterms:title ?d_label ;
                 rdfs:member ?coll .
             FILTER(lang(?d_label) = "" || lang(?d_label) = "en" || lang(?label) = "en-AU")
-            FILTER ({f'STR(?d_id) = "{dataset_id}" && ' if dataset_id is not None else ""}DATATYPE(?d_id) = xsd:token)
             ?coll a geo:FeatureCollection ;
                 dcterms:identifier ?id ;
                 dcterms:title ?label .
@@ -343,7 +341,6 @@ async def list_features(
             {collection_query if collection_id is None else ""}
             ?f a geo:Feature ;
                 dcterms:identifier ?id .
-            FILTER(DATATYPE(?id) = xsd:token)
             OPTIONAL {{
                 ?f dcterms:description ?desc .
             }}
